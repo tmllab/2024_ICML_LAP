@@ -27,7 +27,7 @@ Catastrophic overfitting (CO) presents a significant challenge in single-step ad
 
 ### Training
 
-To train AAER on CIFAR-10
+To train LAP on CIFAR-10
 ```
 # epsilon8
 python3 LAP.py --epoch 30 --epsilon 8 --clamp 1 --alpha 1.00 --delta-init zero --beta 0.03 --gamma 0.30 --out-dir CIFAR10_V-LAP_8
