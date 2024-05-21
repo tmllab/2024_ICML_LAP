@@ -44,12 +44,10 @@ python3 LAP.py --epoch 30 --epsilon 16 --clamp 1 --alpha 1.00 --delta-init zero 
 python3 LAP.py --epoch 30 --epsilon 16 --clamp 1 --alpha 1.25 --beta 0.05 --gamma 0.30 --out-dir CIFAR10_R-LAP_16
 python3 LAP.py --epoch 30 --epsilon 16 --clamp 0 --alpha 1.00 --beta 0.005 --gamma 0.30 --out-dir CIFAR10_N-LAP_16
 
-
 # epsilon32
 python3 LAP.py --epoch 30 --epsilon 32 --clamp 1 --alpha 1.00 --delta-init zero  --beta 0.48 --gamma 0.30 --out-dir CIFAR10_V-LAP_32
 python3 LAP.py --epoch 30 --epsilon 32 --clamp 1 --alpha 1.25 --beta 0.3 --gamma 0.30 --out-dir CIFAR10_R-LAP_32
 python3 LAP.py --epoch 30 --epsilon 32 --clamp 0 --alpha 1.00 --beta 0.75 --gamma 0.30 --out-dir CIFAR10_N-LAP_32
-
 ```
 
 
