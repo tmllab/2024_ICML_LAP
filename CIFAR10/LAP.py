@@ -136,8 +136,7 @@ def main():
             opt.load_state_dict(proxy_opt.state_dict())
 
             model.train()
-            # add_into_weights(model, diff_weights, args.gamma, args.beta, args.layer_number)
-            add_into_weights(model, diff_weights, args.gamma, coeff= 1.0 * args.beta)
+            add_into_weights(model, diff_weights, args.gamma, args.beta, args.layer_number)
             output = model(clamp(X + delta[:X.size(0)], lower_limit, upper_limit))
             loss = nn.CrossEntropyLoss(reduce=False)(output, y)
             loss = loss.mean()
