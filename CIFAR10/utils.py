@@ -35,7 +35,7 @@ def diff_in_weights(model, proxy):
             diff_dict[old_k] = old_w.norm() / (diff_w.norm() + EPS) * diff_w
     return diff_dict
 
-def add_into_weights(model, diff, gamma, coeff=1.0, layer_number  = 21):
+def add_into_weights(model, diff, gamma, beta, layer_number):
     names_in_diff = diff.keys()
     diff_count = 0
     with torch.no_grad():
@@ -43,7 +43,7 @@ def add_into_weights(model, diff, gamma, coeff=1.0, layer_number  = 21):
             if name in names_in_diff:
                     diff_count += 1
                     layer_weight = 1.0 - np.power(np.log(diff_count) / np.log(layer_number), gamma) #21 for resnet-18, 35 for wederesnet-34, 50 for Vit-small
-                    param.add_(layer_weight * coeff * diff[name])
+                    param.add_(layer_weight * beta * diff[name])
 
 def clamp(X, lower_limit, upper_limit):
     return torch.max(torch.min(X, upper_limit), lower_limit)
