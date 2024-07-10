@@ -59,4 +59,9 @@ python3 LAP.py --epoch 30 --epsilon 32 --clamp 0 --alpha 1.00 --beta 0.75 --gamm
 If you find the code useful in your research, please consider citing our paper:
 
 <pre>
+@inproceedings{linlayer,
+  title={Layer-Aware Analysis of Catastrophic Overfitting: Revealing the Pseudo-Robust Shortcut Dependency},
+  author={Lin, Runqi and Yu, Chaojian and Han, Bo and Su, Hang and Liu, Tongliang},
+  booktitle={Forty-first International Conference on Machine Learning}
+}
 </pre>
